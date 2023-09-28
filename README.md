@@ -1,2 +1,2 @@
 # ListMovie
-Live Web https://joshuabulyanzebua.github.io/ListMoivie/
+Live Web https://joshuabulyanzebua.github.io/ListMovie/
