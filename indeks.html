@@ -11,32 +11,7 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-
-    <style>
-      *,
-      body {
-        margin: 0;
-        padding: 0%;
-      }
-      .containerBG {
-        background-image: url('https://png.pngtree.com/background/20220720/original/pngtree-black-texture-picture-image_1677831.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-
-      .margin {
-        margin-top: 10pc;
-        height: 20pc;
-      }
-
-      .container1 {
-        margin-top: 1pc;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="containerBG">
@@ -325,86 +300,7 @@
       <br /><br />
     </main>
 
-    <script>
-      setInterval(function () {
-        var genreElement = document.getElementById('genre');
-        var currentGenre = genreElement.textContent;
-        var genreMapping = {
-          Horor: 'Action',
-          Action: 'Romance',
-          Drama: 'Anime',
-          Komedi: 'Horor',
-        };
-
-        var newGenre = genreMapping[currentGenre] || 'Horor';
-        genreElement.textContent = newGenre;
-      }, 4000);
-
-      function klik1() {
-        alert('Sedang dalam pengembangan');
-      }
-
-      var merah = document.querySelector('#red');
-      var hijau = document.querySelector('#green');
-      var biru = document.querySelector('#blue');
-      var isi = document.querySelector('.bodi');
-
-      merah.addEventListener('input', ubahwarna);
-      hijau.addEventListener('input', ubahwarna);
-      biru.addEventListener('input', ubahwarna);
-
-      function ubahwarna() {
-        var bgmerah = merah.value;
-        var bghijau = hijau.value;
-        var bgbiru = biru.value;
-
-        isi.style.backgroundColor = `rgb(${bgmerah},${bghijau},${bgbiru})`;
-      }
-      function cariGenre() {
-        var input = document.getElementById('cari').value.toLowerCase();
-        var images = document.querySelectorAll('.carousel-item');
-
-        for (var i = 0; i < images.length; i++) {
-          var genres = images[i]
-            .querySelector('img')
-            .getAttribute('genre')
-            .toLowerCase()
-            .split(',');
-
-          var imageElement = images[i].querySelector('img');
-          var found = false;
-
-          for (var j = 0; j < genres.length; j++) {
-            if (genres[j].trim().includes(input)) {
-              found = true;
-              break;
-            }
-          }
-
-          if (found) {
-            images[i].style.display = 'block';
-          } else {
-            images[i].style.display = 'none';
-          }
-        }
-
-        var activeIndex = document
-          .querySelector('.carousel-item.active')
-          .getAttribute('data-bs-slide-to');
-        var indicators = document.querySelectorAll('.carousel-indicators li');
-
-        for (var k = 0; k < indicators.length; k++) {
-          indicators[k].classList.remove('active');
-        }
-
-        if (activeIndex !== null && activeIndex !== undefined) {
-          var matchingIndicator = document.querySelector(
-            `.carousel-indicators li[data-bs-slide-to="${activeIndex}"]`
-          );
-          matchingIndicator.classList.add('active');
-        }
-      }
-    </script>
+    <script src="script.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

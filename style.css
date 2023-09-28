@@ -1,0 +1,23 @@
+*,
+body {
+  margin: 0;
+  padding: 0%;
+}
+.containerBG {
+  background-image: url('https://png.pngtree.com/background/20220720/original/pngtree-black-texture-picture-image_1677831.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.margin {
+  margin-top: 10pc;
+  height: 20pc;
+}
+
+.container1 {
+  margin-top: 1pc;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
