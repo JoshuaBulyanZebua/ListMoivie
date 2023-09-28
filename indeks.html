@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      *,
+      body {
+        margin: 0;
+        padding: 0%;
+      }
+      .containerBG {
+        background-image: url('https://png.pngtree.com/background/20220720/original/pngtree-black-texture-picture-image_1677831.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .margin {
+        margin-top: 10pc;
+        height: 20pc;
+      }
+
+      .container1 {
+        margin-top: 1pc;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="containerBG">
+      <nav class="navbar navbar-expand-lg bg-body containerBG">
+        <div class="container-fluid m-3">
+          <a class="navbar-brand" href="#">
+            <img
+              src="Logo.png"
+              alt="Logo"
+              width="400ch"
+              height="40ch"
+              class="d-inline-block align-text-top ms-4"
+            />
+          </a>
+          <button
+            class="navbar-toggler bg-white text-dark"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
+              <li class="nav-item me-4">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link text-white" href="#">List Movie</a>
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link text-white" href="#">Contact</a>
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link text-white" href="#">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="container bg-transparent align-items-center justify-content-center margin"
+      >
+        <div class="text-center">
+          <label for="explore" class="text-uppercase text-white fs-1"
+            >Explorer your movies</label
+          >
+          <span id="genre" class="text-warning text-uppercase fs-1">Horor</span>
+        </div>
+        <div class="text-center text-white">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit?
+        </div>
+        <div class="text-center mt-4">
+          <button class="btn btn-primary me-5" id="btn" onclick="klik1()">
+            REGISTER
+          </button>
+          <button class="btn btn-primary" id="btn" onclick="klik1()">
+            LOGIN
+          </button>
+        </div>
+      </div>
+      <br /><br />
+    </div>
+    <main class="bodi">
+      <div class="container1">
+        <br />
+        <div class="row my-3">
+          <div class="col-md-3 offset-md-5">
+            <input
+              type="search"
+              class="form-control"
+              name="cari"
+              id="cari"
+              placeholder="Search"
+              onkeydown="cariGenre()"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-1 offset-md-5">
+            <label for="red" class="form-label">R:</label>
+            <input
+              type="range"
+              class="form-range"
+              name="red"
+              id="red"
+              min="0"
+              max="255"
+              value="255"
+            />
+          </div>
+          <div class="col-md-1">
+            <label for="green" class="form-label">G:</label>
+            <input
+              type="range"
+              class="form-range"
+              name="green"
+              id="green"
+              min="0"
+              max="255"
+              value="255"
+            />
+          </div>
+          <div class="col-md-1">
+            <label for="blue" class="form-label">B:</label>
+            <input
+              type="range"
+              class="form-range"
+              name="blue"
+              id="blue"
+              min="0"
+              max="255"
+              value="255"
+            />
+          </div>
+        </div>
+        <br />
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+          <ol class="carousel-indicators visually-hidden">
+            <li
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="1"
+              class="active"
+            ></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="4"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="5"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="6"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-2">
+                  <img
+                    src="https://pbs.twimg.com/media/BpH_iO0CYAEUKtm.jpg:large"
+                    alt="Pohon Boneka"
+                    genre="Horor"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="col-2">
+                  <img
+                    src="https://m.media-amazon.com/images/I/51JXJNnhGeL.jpg"
+                    alt="batman"
+                    genre="action"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="col-2">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/1416/8662/products/titanic_1997_original_film_art_713cc08c-5fe2-49d1-bd32-51a1d5890d43.jpg?v=1675533926"
+                    alt="titanic"
+                    genre="romance"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="col-2">
+                  <img
+                    src="https://www.mikethefanboy.com/wp-content/uploads/2011/06/transformers_dark_of_the_moon_ver6.jpg"
+                    alt="transformers"
+                    genre="robot"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="col-2">
+                  <img
+                    src="https://s1.bukalapak.com/img/68286857232/large/Poster_Film___Avengers_Endgame___Marvel_Studios___Movie_Post.jpg"
+                    alt="Avengers"
+                    genre="action, hero"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="col-2">
+                  <img
+                    src="https://images.jdmagicbox.com/comp/jd_social/news/2018jul25/image-147112-yjikbvyqus.jpg"
+                    alt="Merantau Warior"
+                    genre="action"
+                    class="d-block w-100"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-2 offset-0">
+                  <img
+                    src="https://pbs.twimg.com/media/BpH_iO0CYAEUKtm.jpg:large"
+                    alt="pohon boneka"
+                    genre="horor"
+                    class="d-block w-100"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-2 offset-2">
+                  <img
+                    src="https://m.media-amazon.com/images/I/51JXJNnhGeL.jpg"
+                    alt="batman"
+                    genre="hero"
+                    class="d-block w-100"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-2 offset-4">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/1416/8662/products/titanic_1997_original_film_art_713cc08c-5fe2-49d1-bd32-51a1d5890d43.jpg?v=1675533926"
+                    alt="titanic"
+                    genre="romance"
+                    class="d-block w-100"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-2 offset-6">
+                  <img
+                    src="https://www.mikethefanboy.com/wp-content/uploads/2011/06/transformers_dark_of_the_moon_ver6.jpg"
+                    alt="transformers"
+                    genre="robot"
+                    class="d-block w-100"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-2 offset-8">
+                  <img
+                    src="https://s1.bukalapak.com/img/68286857232/large/Poster_Film___Avengers_Endgame___Marvel_Studios___Movie_Post.jpg"
+                    alt="Avengers"
+                    genre="hero"
+                    class="d-block w-100"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-2 offset-10">
+                  <img
+                    src="https://images.jdmagicbox.com/comp/jd_social/news/2018jul25/image-147112-yjikbvyqus.jpg"
+                    alt="Merantau Warior"
+                    genre="action"
+                    class="d-block w-100"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <br /><br />
+    </main>
+
+    <script>
+      setInterval(function () {
+        var genreElement = document.getElementById('genre');
+        var currentGenre = genreElement.textContent;
+        var genreMapping = {
+          Horor: 'Action',
+          Action: 'Romance',
+          Drama: 'Anime',
+          Komedi: 'Horor',
+        };
+
+        var newGenre = genreMapping[currentGenre] || 'Horor';
+        genreElement.textContent = newGenre;
+      }, 4000);
+
+      function klik1() {
+        alert('Sedang dalam pengembangan');
+      }
+
+      var merah = document.querySelector('#red');
+      var hijau = document.querySelector('#green');
+      var biru = document.querySelector('#blue');
+      var isi = document.querySelector('.bodi');
+
+      merah.addEventListener('input', ubahwarna);
+      hijau.addEventListener('input', ubahwarna);
+      biru.addEventListener('input', ubahwarna);
+
+      function ubahwarna() {
+        var bgmerah = merah.value;
+        var bghijau = hijau.value;
+        var bgbiru = biru.value;
+
+        isi.style.backgroundColor = `rgb(${bgmerah},${bghijau},${bgbiru})`;
+      }
+      function cariGenre() {
+        var input = document.getElementById('cari').value.toLowerCase();
+        var images = document.querySelectorAll('.carousel-item');
+
+        for (var i = 0; i < images.length; i++) {
+          var genres = images[i]
+            .querySelector('img')
+            .getAttribute('genre')
+            .toLowerCase()
+            .split(',');
+
+          var imageElement = images[i].querySelector('img');
+          var found = false;
+
+          for (var j = 0; j < genres.length; j++) {
+            if (genres[j].trim().includes(input)) {
+              found = true;
+              break;
+            }
+          }
+
+          if (found) {
+            images[i].style.display = 'block';
+          } else {
+            images[i].style.display = 'none';
+          }
+        }
+
+        var activeIndex = document
+          .querySelector('.carousel-item.active')
+          .getAttribute('data-bs-slide-to');
+        var indicators = document.querySelectorAll('.carousel-indicators li');
+
+        for (var k = 0; k < indicators.length; k++) {
+          indicators[k].classList.remove('active');
+        }
+
+        if (activeIndex !== null && activeIndex !== undefined) {
+          var matchingIndicator = document.querySelector(
+            `.carousel-indicators li[data-bs-slide-to="${activeIndex}"]`
+          );
+          matchingIndicator.classList.add('active');
+        }
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
